@@ -27,25 +27,19 @@ Entrust is a succinct and flexible way to add Role-based Permissions to **Larave
 
 ## Installation
 
-1) In order to install Laravel 6 Entrust, just add the following to your composer.json. Then run `composer update`:
+1) In order to install Laravel 6 Entrust, run this command:
 
 ```json
-"parsidev/entrust": "^2.0"
+composer require parsidev/entrust
 ```
 
-2) Open your `config/app.php` and add the following to the `providers` array:
-
-```php
-Parsidev\Entrust\EntrustServiceProvider::class,
-```
-
-3) Run the command below to publish the package config file `config/entrust.php`:
+2) Run the command below to publish the package config file `config/entrust.php`:
 
 ```shell
 php artisan vendor:publish
 ```
 
-4) Open your `config/auth.php` and add the following to it:
+3) Open your `config/auth.php` and add the following to it:
 
 ```php
 'providers' => [
@@ -57,7 +51,7 @@ php artisan vendor:publish
 ],
 ```
 
-5)  If you want to use [Middleware](#middleware) (requires Laravel 5.1 or later) you also need to add the following:
+4)  If you want to use [Middleware](#middleware) (requires Laravel 5.1 or later) you also need to add the following:
 
 ```php
     'role' => \Parsidev\Entrust\Middleware\EntrustRole::class,
